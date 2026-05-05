@@ -1,6 +1,8 @@
 :root {
   --navy-900: #0d1b3d;
   --navy-700: #17336d;
+  --cyan-400: #3fd8ff;
+  --yellow-300: #ffe082;
   --gray-100: #f3f5f8;
   --gray-300: #d2d9e3;
   --gray-700: #4a5568;
@@ -23,6 +25,25 @@ body {
 .container {
   width: min(1120px, 92%);
   margin: 0 auto;
+}
+
+.top-cta-bar {
+  background: linear-gradient(90deg, #091733, #11306a);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0;
+}
+
+.top-cta-inner p {
+  margin: 0;
+  font-size: 0.94rem;
 }
 
 .site-header {
@@ -49,37 +70,51 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  background: radial-gradient(circle at 10% 10%, rgba(63, 216, 255, 0.25), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 224, 130, 0.2), transparent 35%),
+    linear-gradient(135deg, #0a1734 0%, #163779 60%, #102a5c 100%);
   color: var(--white);
-  padding: 6rem 0 5rem;
+  padding: 6.5rem 0 5.5rem;
 }
 
 .hero-inner {
-  max-width: 760px;
+  max-width: 860px;
 }
 
 .hero-label {
   display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.25rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 999px;
   font-size: 0.9rem;
+}
+
+.hero-focus {
+  margin: 0.9rem 0 1.1rem;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  color: var(--yellow-300);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero h1 {
   margin: 0;
   line-height: 1.35;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
 .hero h1 span {
   display: block;
+  color: var(--cyan-400);
 }
 
 .hero-text {
   margin: 1.2rem 0 0;
   color: #e6ecf7;
+  max-width: 62ch;
 }
 
 .hero-actions {
@@ -155,11 +190,12 @@ body {
   text-decoration: none;
   font-weight: 700;
   border: 1px solid transparent;
-  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .btn:hover {
-  opacity: 0.88;
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
 .btn-primary {
@@ -198,6 +234,11 @@ body {
   .hero {
     padding-top: 5rem;
   }
+
+  .top-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 600px) {
@@ -207,12 +248,22 @@ body {
     align-items: flex-start;
   }
 
+  .top-cta-inner p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
   .btn {
     width: 100%;
     text-align: center;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .hero-actions .btn {
     width: 100%;
+  }
+
+  .hero {
+    padding: 4.5rem 0 4rem;
   }
 }
