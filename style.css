@@ -15,9 +15,12 @@ body { margin: 0; font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-se
 h1, h2, h3 { color: var(--navy); line-height: 1.4; }
 h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 0; }
-.site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); border-bottom: 1px solid var(--gray-line); backdrop-filter: blur(6px); }
-.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; }
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); border-bottom: 1px solid var(--gray-line); backdrop-filter: blur(6px); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0 8px; }
 .logo { color: var(--navy); text-decoration: none; font-weight: 700; }
+.header-menu { border-top: 1px solid #e7edf6; }
+.menu-inner { display: flex; gap: 18px; align-items: center; padding: 8px 0; }
+.menu-inner a { text-decoration: none; color: #334155; font-size: .9rem; font-weight: 700; }
 .hero { background: linear-gradient(130deg, #edf4ff, #f8fbff); }
 .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 28px; align-items: center; }
 .badge { display: inline-block; background: #e6f8ff; color: #025a7b; border: 1px solid #a7dff0; padding: 6px 12px; border-radius: 999px; font-weight: 700; }
@@ -36,10 +39,14 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 0; }
 .issue-grid { grid-template-columns: repeat(3, 1fr); }
 .solution-grid { grid-template-columns: repeat(4, 1fr); }
 .voice-grid { grid-template-columns: repeat(3, 1fr); }
+.voice-card { padding: 0; overflow: hidden; }
+.voice-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+.voice-card div { padding: 14px 16px 16px; }
+.voice-card strong { color: var(--navy); font-size: .98rem; }
+.voice-card p { margin: 10px 0 0; color: #334155; }
 .card { background: #fff; border: 1px solid var(--gray-line); border-radius: 12px; padding: 16px; }
 .narrow { max-width: 840px; }
 .benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 18px; }
-.logo-area { margin-top: 18px; border: 2px dashed #9aa8bf; border-radius: 10px; padding: 18px; text-align: center; color: #526079; background: #fff; }
 .faq-list details { border: 1px solid var(--gray-line); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; background: #fff; }
 .faq-list summary { cursor: pointer; font-weight: 700; color: var(--navy); }
 .final-cta { background: linear-gradient(160deg, #eaf2ff, #f8fcff); }
@@ -57,8 +64,14 @@ input, textarea { width: 100%; border: 1px solid #bcc8da; border-radius: 8px; pa
   .solution-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 760px) {
-  .section { padding: 56px 0; }
+  .section { padding: 48px 0; }
+  .hero.section { padding-top: 22px; }
   .header-inner, .hero-grid, .contact-grid, .benefits, .issue-grid, .solution-grid, .voice-grid, .kpi-row { grid-template-columns: 1fr; display: grid; }
-  .header-inner { display: flex; flex-direction: column; align-items: stretch; }
+  .header-inner { display: flex; flex-direction: column; align-items: stretch; padding: 8px 0 6px; }
+  .menu-inner { justify-content: space-between; gap: 8px; padding: 6px 0; }
+  .menu-inner a { font-size: .8rem; }
+  .logo { font-size: .95rem; }
   .btn, .header-cta { width: 100%; }
+  .visual-panel img { min-height: 280px; }
+  .voice-card img { height: 170px; }
 }
