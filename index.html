@@ -3,96 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SES・受託開発会社向け 経理代行サービス</title>
+    <title>SES・受託開発会社専門 経理代行サービス | IT業界に強い税理士事務所</title>
     <meta
       name="description"
-      content="SES・受託開発会社向けに、請求書発行・入金確認・外注費管理・粗利管理まで対応する経理代行サービスの紹介ページです。"
+      content="SES・受託開発会社専門の経理代行サービス。請求書発行、入金確認、外注費管理、案件別粗利管理・プロジェクト別粗利管理まで一気通貫でサポートします。"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="top-cta-bar">
-      <div class="container top-cta-inner">
-        <p>最短3営業日で導入相談可能｜SES・受託開発会社の経理課題を即日ヒアリング</p>
-        <a href="#contact" class="btn btn-primary">無料相談を予約する</a>
-      </div>
-    </div>
-
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#" class="logo">Finance Partner for IT</a>
-        <a href="#contact" class="btn btn-outline">30分無料相談</a>
+        <a href="#top" class="logo">IT業界に強い税理士事務所｜経理代行</a>
+        <a href="#contact" class="btn btn-primary header-cta">無料で相談・お見積りをする</a>
       </div>
     </header>
 
-    <main>
-      <section class="hero" id="top">
-        <div class="container hero-layout">
-          <div class="hero-content">
-            <p class="hero-label">IT業界に特化した経理代行</p>
-            <p class="hero-focus">SES・受託開発会社専門</p>
-            <h1>
-              請求・入金・外注費・粗利管理を、
-              <span>経営判断につながる数字へ。</span>
-            </h1>
-            <p class="hero-text">
-              IT業界の商流を理解した税理士事務所が、現場に合わせた運用で経理を最適化。
-              月次の見える化まで一気通貫で支援します。
+    <main id="top">
+      <!-- 1. ファーストビュー -->
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div>
+            <p class="badge">SES・受託開発会社専門</p>
+            <h1>SES・受託開発のバックオフィスを、利益を生む体制へ。</h1>
+            <p class="lead">
+              請求書発行から入金確認、外注費管理、プロジェクト別の粗利管理まで一気通貫で代行。
+              IT業界の商流を理解した税理士事務所が、貴社の経理を見える化します。
             </p>
-            <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">今すぐ無料相談する</a>
-              <a href="#services" class="btn btn-secondary">サービス内容を見る</a>
+            <ul class="hero-points">
+              <li>請求書発行</li><li>入金確認</li><li>外注費管理</li><li>案件別・プロジェクト別粗利管理</li>
+            </ul>
+            <div class="kpi-row">
+              <div><strong>IT企業支援実績</strong><span>〇〇社</span></div>
+              <div><strong>継続率</strong><span>〇％</span></div>
+              <div><strong>月次レポート対応</strong><span>最短〇営業日</span></div>
+            </div>
+            <a href="#contact" class="btn btn-accent">無料で相談・お見積りをする</a>
+          </div>
+          <div class="visual-panel" aria-label="経理・粗利管理ダッシュボードのイメージ">
+            <img src="https://images.unsplash.com/photo-1551281044-8b5bdc2d7a0d?auto=format&fit=crop&w=1400&q=80" alt="経理ダッシュボードを確認するビジネスイメージ" />
+            <div class="mini-cards">
+              <div class="mini">月次進捗 92%</div>
+              <div class="mini">未入金アラート 2件</div>
+              <div class="mini">案件粗利 可視化済み</div>
             </div>
           </div>
-          <figure class="hero-visual">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="経理支援を説明するビジネスミーティング" />
-            <figcaption>現場理解 × 経理設計 × 月次可視化</figcaption>
-          </figure>
         </div>
       </section>
 
-      <section class="section section-alt" id="services">
+      <!-- 2. 問題提起 -->
+      <section class="section section-alt">
         <div class="container">
-          <h2>提供サービス</h2>
-          <div class="service-flow">
-            <article class="service-step"><span>01</span><h3>請求書発行</h3><p>条件が複雑な取引先にも、ミスなく迅速に対応。</p></article>
-            <article class="service-step"><span>02</span><h3>入金確認</h3><p>未入金・差異を素早く検知し、回収漏れを防止。</p></article>
-            <article class="service-step"><span>03</span><h3>外注費管理</h3><p>検収・請求・支払を突合し、原価を透明化。</p></article>
-            <article class="service-step"><span>04</span><h3>粗利管理</h3><p>案件別に採算を可視化し、次の打ち手を明確化。</p></article>
+          <h2>このような経理・管理の課題はありませんか？</h2>
+          <div class="card-grid issue-grid">
+            <article class="card"><h3>🧾 請求業務の集中</h3><p>月末・月初に請求書発行や入金確認が集中し、本業に時間を使えない</p></article>
+            <article class="card"><h3>⏱ 清算時間の確認負荷</h3><p>エンジニアごとの清算時間の確認に手間がかかっている</p></article>
+            <article class="card"><h3>🤝 支払い管理の複雑化</h3><p>外注費やパートナー企業への支払い管理が複雑になっている</p></article>
+            <article class="card"><h3>📊 粗利の見えにくさ</h3><p>案件別・プロジェクト別の粗利がリアルタイムで把握できていない</p></article>
+            <article class="card"><h3>📉 利益構造が不透明</h3><p>売上は伸びているのに、どの案件が利益を生んでいるのか分からない</p></article>
+            <article class="card"><h3>👤 属人化リスク</h3><p>経理担当者に業務が属人化し、退職・休職時のリスクがある</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <div class="container contact-wrap">
-          <div class="contact-lead">
-            <h2>無料相談フォーム</h2>
-            <p>現状の運用や課題を共有いただければ、30分の無料相談で改善の優先順位をご提案します。</p>
-            <ul>
-              <li>✓ 現在の経理フロー診断</li>
-              <li>✓ 早期に改善できるポイント整理</li>
-              <li>✓ 体制移行までのロードマップ提示</li>
-            </ul>
+      <!-- 3. 共感セクション -->
+      <section class="section">
+        <div class="container narrow">
+          <h2>SES・受託開発の経理は、一般的な経理代行だけでは対応しきれません</h2>
+          <p>
+            SES・受託開発会社では、案件ごとに契約形態、清算時間、外注費、入金タイミング、支払い条件が異なります。そのため、単なる記帳代行だけでは、経営判断に必要な数字が見えにくくなります。
+          </p>
+          <p>
+            当サービスでは、IT業界特有の商流を理解したうえで、経理業務の代行だけでなく、案件別粗利管理・プロジェクト別粗利管理までサポート。バックオフィスの運用を標準化し、経理の見える化を実現します。
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. 解決策 -->
+      <section class="section section-alt" id="solutions">
+        <div class="container">
+          <h2>経理作業を減らし、案件別の利益が見える体制へ</h2>
+          <div class="card-grid solution-grid">
+            <article class="card"><h3>1. 請求書発行代行</h3><p>SES契約・受託開発契約に応じた請求書発行をサポートします。</p></article>
+            <article class="card"><h3>2. 入金確認・消込管理</h3><p>入金状況を確認し、未入金・入金遅延の早期把握を支援します。</p></article>
+            <article class="card"><h3>3. 外注費・パートナー支払い管理</h3><p>外注先・協力会社への支払い管理を整理し、支払い漏れや確認ミスを防ぎます。</p></article>
+            <article class="card"><h3>4. 案件別・プロジェクト別粗利管理</h3><p>案件ごとの売上・外注費・粗利を見える化し、利益改善につなげます。</p></article>
           </div>
-          <form class="consult-form" action="#" method="post">
-            <label>会社名<input type="text" name="company" placeholder="株式会社〇〇" required /></label>
-            <label>ご担当者名<input type="text" name="name" placeholder="山田 太郎" required /></label>
-            <label>メールアドレス<input type="email" name="email" placeholder="example@company.co.jp" required /></label>
-            <label>電話番号<input type="tel" name="tel" placeholder="03-1234-5678" /></label>
-            <label>ご相談内容
-              <textarea name="message" rows="4" placeholder="請求書発行の属人化、案件別粗利管理の整備 など"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary">無料で相談を申し込む</button>
+        </div>
+      </section>
+
+      <!-- 5. ベネフィット -->
+      <section class="section">
+        <div class="container">
+          <h2>経理を任せることで、経営判断が速くなる</h2>
+          <ul class="benefits">
+            <li>月次の数字が早く見えるようになり、経営判断がスピードアップする</li>
+            <li>赤字案件や利益率の低い案件を早期に発見できる</li>
+            <li>経営者が請求書・入金確認・支払い管理から解放される</li>
+            <li>採用、営業、開発体制づくりに集中できる</li>
+            <li>経理担当者の属人化リスクを減らせる</li>
+            <li>税理士事務所による支援なので、税務・会計面も安心できる</li>
+          </ul>
+          <div class="center"><a href="#contact" class="btn btn-accent">まずは無料相談で、貴社の経理体制を診断する</a></div>
+        </div>
+      </section>
+
+      <!-- 6. 実績・お客様の声 -->
+      <section class="section section-alt">
+        <div class="container">
+          <h2>導入企業の声</h2>
+          <div class="card-grid voice-grid">
+            <article class="card"><p>「月次の数字が出るまでの時間が短縮され、案件別の利益を早く確認できるようになりました」</p><strong>IT受託開発会社 A社</strong></article>
+            <article class="card"><p>「請求書発行と入金確認の負担が減り、営業活動と採用に集中できるようになりました」</p><strong>SES企業 B社</strong></article>
+            <article class="card"><p>「外注費の管理が整理され、どの案件が利益を出しているのか見えるようになりました」</p><strong>システム開発会社 C社</strong></article>
+          </div>
+          <div class="logo-area">導入企業ロゴ掲載エリア</div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ（JSアコーディオン） -->
+      <section class="section">
+        <div class="container narrow">
+          <h2>よくある質問</h2>
+          <div class="faq-list">
+            <details><summary>Q1. マネーフォワードやfreeeなどのクラウド会計ソフトに対応していますか？</summary><p>A. はい、対応可能です。現在の利用状況を確認したうえで、貴社に合った運用方法をご提案します。</p></details>
+            <details><summary>Q2. 現在契約している顧問税理士がいても、経理代行だけ依頼できますか？</summary><p>A. はい、可能です。顧問税理士の先生との役割分担を整理したうえで、経理代行部分のみサポートすることもできます。</p></details>
+            <details><summary>Q3. SES特有の清算時間の管理にも対応できますか？</summary><p>A. はい、対応可能です。契約条件や清算幅を確認し、請求書発行や確認業務をサポートします。</p></details>
+            <details><summary>Q4. 外注先や協力会社への支払い管理も依頼できますか？</summary><p>A. はい、外注費やパートナー企業への支払い管理もサポート可能です。</p></details>
+            <details><summary>Q5. 秘密保持契約、NDAの締結は可能ですか？</summary><p>A. はい、必要に応じて秘密保持契約の締結にも対応します。</p></details>
+            <details><summary>Q6. まずは相談だけでも可能ですか？</summary><p>A. はい、可能です。現在の経理体制や課題を伺ったうえで、必要なサポート範囲をご提案します。</p></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. 最終CTA -->
+      <section class="section final-cta" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <h2>SES・受託開発会社の経理を、利益が見える体制へ変えませんか？</h2>
+            <p>
+              請求書発行、入金確認、外注費管理、案件別粗利管理まで、IT業界の商流を理解した税理士事務所が一気通貫でサポートします。まずは30分の無料オンライン相談で、貴社の経理体制を確認します。
+            </p>
+            <a href="#form" class="btn btn-accent">無料で相談・お見積りをする</a>
+          </div>
+          <form id="form" class="form" action="#" method="post">
+            <label>会社名<input type="text" name="company" required /></label>
+            <label>お名前<input type="text" name="name" required /></label>
+            <label>メールアドレス<input type="email" name="email" required /></label>
+            <label>電話番号<input type="tel" name="phone" /></label>
+            <label>ご相談内容<textarea name="message" rows="4"></textarea></label>
+            <button class="btn btn-primary" type="submit">無料で相談・お見積りをする</button>
+            <ul class="assurance"><li>無理な営業はありません</li><li>相談だけでも可能です</li><li>オンライン対応可能</li><li>秘密保持契約にも対応</li></ul>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2026 Finance Partner for IT. All Rights Reserved.</p>
-        <a href="#top">ページ上部へ戻る</a>
-      </div>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
