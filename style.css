@@ -1,0 +1,218 @@
+:root {
+  --navy-900: #0d1b3d;
+  --navy-700: #17336d;
+  --gray-100: #f3f5f8;
+  --gray-300: #d2d9e3;
+  --gray-700: #4a5568;
+  --white: #ffffff;
+  --text: #1b2435;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.logo {
+  color: var(--navy-900);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+  color: var(--white);
+  padding: 6rem 0 5rem;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.hero-label {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  margin: 0;
+  line-height: 1.35;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-text {
+  margin: 1.2rem 0 0;
+  color: #e6ecf7;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  color: var(--navy-900);
+}
+
+.section-alt {
+  background: var(--gray-100);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card,
+.service {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+
+.card h3,
+.service h3 {
+  margin-top: 0;
+  color: var(--navy-700);
+}
+
+.reasons {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.reasons li {
+  margin: 0.6rem 0;
+}
+
+.inline-cta,
+.contact-box {
+  margin-top: 2rem;
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn-primary {
+  background: var(--navy-900);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy-900);
+  border-color: var(--white);
+}
+
+.btn-outline {
+  background: var(--white);
+  color: var(--navy-900);
+  border-color: var(--navy-700);
+}
+
+.site-footer {
+  border-top: 1px solid var(--gray-300);
+  background: #fbfcfe;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: var(--navy-700);
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner,
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+}
